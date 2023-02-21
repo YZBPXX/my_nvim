@@ -1,0 +1,11 @@
+{
+	"test": {
+		"prefix": "test",
+		"body": [
+            \begin{somethin}
+                fsdf
+            \end{somethin}
+		],
+		"description": "test"
+	}
+}
