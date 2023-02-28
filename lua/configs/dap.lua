@@ -34,7 +34,7 @@ function M.config()
     dap.adapters.cppdbg = {
       id = 'cppdbg',
       type = 'executable',
-      command = '/Users/yaozhengbing/.local/share/nvim/mason/packages/cpptools/extension/debugAdapters/bin/OpenDebugAD7',
+      command = string.format('%s/.local/share/nvim/mason/packages/cpptools/extension/debugAdapters/bin/OpenDebugAD7',os.getenv("HOME")),
     }
     dap.configurations.cpp = {
 	{

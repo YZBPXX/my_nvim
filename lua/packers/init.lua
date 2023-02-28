@@ -13,6 +13,8 @@ require('packer').startup({
 	    'williamboman/mason.nvim',
 	    'williamboman/mason-lspconfig.nvim',
 	    "jayp0521/mason-nvim-dap.nvim",
+	    -- 自动安装mason 相关工具
+	    "WhoIsSethDaniel/mason-tool-installer.nvim",
 	    "rcarriga/nvim-dap-ui",
 	    'skywind3000/asyncrun.vim',
 	    'iamcco/markdown-preview.nvim',
@@ -64,8 +66,9 @@ require('packer').startup({
 	transitive_disable = true,
 	auto_reload_compiled = true,
 	git = {
-	cmd = 'git',
-	clone_timeout = 3600,
+		cmd = 'git',
+		clone_timeout = 3600,
+		depth = 1,
      },
  
      display = {
@@ -106,6 +109,11 @@ vim.cmd[[colorscheme tokyonight]]
 -- require("cmp").setup()
 -- Set up nvim-cmp.
 require("mason").setup()
+require("mason-tool-installer").setup {
+  ensure_installed = {"black", "cpplint", "debugpy", "prettier", "pyright"},
+  auto_update = false,
+  run_on_start = true,
+}
 require("configs.cmp").config()
 require("configs.vimtex").config()
 require("configs.nvim-tree").config()
