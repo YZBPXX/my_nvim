@@ -35,7 +35,7 @@ require('packer').startup({
 	    'folke/tokyonight.nvim',
 	    'nvim-tree/nvim-tree.lua',
 	    'nvim-tree/nvim-web-devicons', -- optional, for file icons
-	    'glepnir/lspsaga.nvim',
+	    use {'glepnir/lspsaga.nvim', commit = "b7b4777" },
 	    'nvim-lualine/lualine.nvim',
 	    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'},
 
