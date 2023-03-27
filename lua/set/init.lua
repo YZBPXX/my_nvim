@@ -2,6 +2,7 @@
 vim.api.nvim_set_option('updatetime', 6000)
 vim.o.number = true
 vim.o.shiftwidth=4
+vim.o.wrap=false
 vim.o.termguicolors = true
 -- vim.o.mapleader = ' '
 vim.o.smartindent = true
