@@ -3,7 +3,7 @@ local M = {}
 function M.config()
     require('bufferline').setup {
         options = {
-            numbers = "ordinal",
+            numbers = "buffer_id",
             max_name_length = 15,
             max_prefix_length = 6,
             diagnostics = "nvim_lsp",
