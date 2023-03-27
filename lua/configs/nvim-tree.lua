@@ -13,7 +13,8 @@ function M.config()
      require("nvim-tree").setup({
        sort_by = "case_sensitive",
        view = {
-	 adaptive_size = true,
+         width = 20,
+	 -- adaptive_size = true,
 	 mappings = {
 	   list = {
 	     { key = "T", action = "dir_up" },
