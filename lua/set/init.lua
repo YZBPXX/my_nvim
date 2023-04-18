@@ -7,7 +7,11 @@ vim.o.wrap=false
 vim.o.termguicolors = true
 -- vim.o.mapleader = ' '
 vim.o.smartindent = true
+<<<<<<< HEAD
 vim.o.mouse = c
+=======
+vim.o.mouse = 'c'
+>>>>>>> refs/remotes/origin/main
 vim.o.clipboard = "unnamedplus"
 vim.cmd[[
 if has("autocmd")
