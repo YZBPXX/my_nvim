@@ -144,6 +144,7 @@ function M.config()
 
     -- use default config
     saga.init_lsp_saga({
+    --saga.setup({
         -- Options with default value
         -- "single" | "double" | "rounded" | "bold" | "plus"
         border_style = "bold",
