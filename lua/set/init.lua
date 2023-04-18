@@ -7,7 +7,7 @@ vim.o.wrap=false
 vim.o.termguicolors = true
 -- vim.o.mapleader = ' '
 vim.o.smartindent = true
-vim.o.mouse = 'a'
+-- vim.o.mouse = 'a'
 vim.o.clipboard = "unnamedplus"
 vim.cmd[[
 if has("autocmd")

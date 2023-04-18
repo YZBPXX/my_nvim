@@ -51,7 +51,34 @@ require('packer').startup({
 	    use {
 	      'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	      requires = { {'nvim-lua/plenary.nvim'} }
-	    }
+	    },
+	    --- chatgpt
+	    -- Packer
+	    use {
+	      "jackMort/ChatGPT.nvim",
+		config = function()
+		  require("chatgpt").setup()
+		end,
+		requires = {
+		  "MunifTanjim/nui.nvim",
+		  "nvim-lua/plenary.nvim",
+		  "nvim-telescope/telescope.nvim"
+		}
+	    },
+
+	    -- Lazy
+	    --{
+	    --  "jackMort/ChatGPT.nvim",
+	    --    event = "VeryLazy",
+	    --    config = function()
+	    --      require("chatgpt").setup()
+	    --    end,
+	    --    dependencies = {
+	    --      "MunifTanjim/nui.nvim",
+	    --      "nvim-lua/plenary.nvim",
+	    --      "nvim-telescope/telescope.nvim"
+	    --    }
+	    --}
 	}
     end,
     config = {
