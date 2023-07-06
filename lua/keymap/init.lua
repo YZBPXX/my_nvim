@@ -3,6 +3,7 @@ vim.keymap.set('n', 'S', ':w<cr>')
 vim.keymap.set({'n', 'x'}, 'Y', '"+y')
 vim.keymap.set({'n', 'x'}, 'P', '"+p')
 vim.keymap.set('i', 'jk', '<esc>')
+vim.keymap.set("n",'<c-l>','^v$hyIprint(\"<c-o>P: \", <c-o>A)<esc>')
 
 vim.keymap.set('i','<c-f>','<right>')
 vim.keymap.set('i','<c-b>','<left>')
