@@ -36,8 +36,13 @@ require('packer').startup({
 	    'nvim-tree/nvim-tree.lua',
 	    'nvim-tree/nvim-web-devicons', -- optional, for file icons
 	    use {'glepnir/lspsaga.nvim', commit = "b7b4777" },
+            use {
+               'nvim-lualine/lualine.nvim',
+		  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+		},
 	    'nvim-lualine/lualine.nvim',
-	    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'},
+	    -- use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'},
+	    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'},
 
 		-- move
 	    --use {
@@ -145,7 +150,7 @@ require("configs.cmp").config()
 require("configs.vimtex").config()
 require("configs.nvim-tree").config()
 require("configs.dap").config()
--- require("configs.lualine").config()
+require("configs.lualine")
 require("configs.markdown-preview").config()
 require("configs.luasnip").config()
 --require("configs.hop").config()
